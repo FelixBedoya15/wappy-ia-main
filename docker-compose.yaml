@@ -14,7 +14,7 @@ services:
     build:
       context: .
       args:
-        OLLAMA_BASE_URL: '/ollama'
+        OLLAMA_BASE_URL: '/ia.wappy-ia.com'
       dockerfile: Dockerfile
     image: ghcr.io/open-webui/open-webui:${WEBUI_DOCKER_TAG-main}
     container_name: open-webui
