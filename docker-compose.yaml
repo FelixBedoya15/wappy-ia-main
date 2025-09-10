@@ -32,7 +32,7 @@ services:
     environment:
       - OLLAMA_BASE_URL=http://ollama:11434
       - WEBUI_SECRET_KEY=${WEBUI_SECRET_KEY}
-      - OPENAI_API_KEY=${OPENAI_API_KEY:-}  # Opcional
+
 
 volumes:
   ollama: {}
