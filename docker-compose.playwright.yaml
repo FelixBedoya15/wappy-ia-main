@@ -7,4 +7,4 @@ services:
   open-webui:
     environment:
       - 'WEB_LOADER_ENGINE=playwright'
-      - 'PLAYWRIGHT_WS_URL=ws://playwright:3000'
+      - 'PLAYWRIGHT_WS_URL=ws://playwright:3001'
