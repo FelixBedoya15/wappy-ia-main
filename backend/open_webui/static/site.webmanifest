@@ -1,6 +1,6 @@
 {
-  "name": "WAPPY IA",
-  "short_name": "WAPPY",
+  "name": "Open WebUI",
+  "short_name": "WebUI",
   "icons": [
     {
       "src": "/static/web-app-manifest-192x192.png",
