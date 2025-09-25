@@ -8,7 +8,7 @@
 
 	import Modal from '../common/Modal.svelte';
 	import Account from './Settings/Account.svelte';
-	import About from './Settings/About.svelte';
+	// import About from './Settings/About.svelte';
 	import General from './Settings/General.svelte';
 	import Interface from './Settings/Interface.svelte';
 	import Audio from './Settings/Audio.svelte';
@@ -417,7 +417,9 @@
 				'webhook url',
 				'webhookurl'
 			]
-		},
+		}
+		/*
+		,
 		{
 			id: 'about',
 			title: 'About',
@@ -466,6 +468,7 @@
 				'versioninfo'
 			]
 		}
+		*/
 	];
 
 	let availableSettings = [];
@@ -908,9 +911,11 @@
 							toast.success($i18n.t('Settings saved successfully!'));
 						}}
 					/>
+					<!--
 				{:else if selectedTab === 'about'}
 					<About />
 				{/if}
+				-->
 			</div>
 		</div>
 	</div>
