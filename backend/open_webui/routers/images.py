@@ -586,15 +586,17 @@ async def image_generations(
 
             model = get_image_model(request)
             data = {
-                "prompt": {"text": form_data.prompt},
-                "samples": form_data.n
+                "instances": {"prompt": form_data.prompt},
+                "parameters": {
+                    "sampleCount": form_data.n,
+                    "outputOptions": {"mimeType": "image/png"},
+                },
             }
 
-            
             # Use asyncio.to_thread for the requests.post call
             r = await asyncio.to_thread(
                 requests.post,
-                url=f"{request.app.state.config.IMAGES_GEMINI_API_BASE_URL}/models/{model}:generateImage?key={request.app.state.config.IMAGES_GEMINI_API_KEY}",
+                url=f"{request.app.state.config.IMAGES_GEMINI_API_BASE_URL}/models/{model}:predict",
                 json=data,
                 headers=headers,
             )
@@ -603,9 +605,9 @@ async def image_generations(
             res = r.json()
 
             images = []
-            for image in res.get("images", []):
+            for image in res["predictions"]:
                 image_data, content_type = load_b64_image_data(
-                    image["imageBytes"]
+                    image["bytesBase64Encoded"]
                 )
                 url = upload_image(request, image_data, content_type, data, user)
                 images.append({"url": url})
