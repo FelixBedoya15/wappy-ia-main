@@ -14,6 +14,7 @@
 	import Drawer from '../common/Drawer.svelte';
 	import EllipsisVertical from '../icons/EllipsisVertical.svelte';
 	import Thread from './Thread.svelte';
+	import i18n from '$lib/i18n';
 
 	export let id = '';
 
@@ -195,7 +196,7 @@
 </script>
 
 <svelte:head>
-	<title>#{channel?.name ?? 'Channel'} • Open WebUI</title>
+	<title>#{channel?.name ?? 'Channel'} • WAPPY IA</title>
 </svelte:head>
 
 <div
@@ -252,6 +253,10 @@
 					{typingUsers}
 					userSuggestions={true}
 					channelSuggestions={true}
+					disabled={!channel?.write_access}
+					placeholder={!channel?.write_access
+						? $i18n.t('You do not have permission to send messages in this channel.')
+						: $i18n.t('Type here...')}
 					{onChange}
 					onSubmit={submitHandler}
 					{scrollToBottom}
