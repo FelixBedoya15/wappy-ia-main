@@ -153,4 +153,5 @@ opentelemetry-instrumentation-aiohttp-client==0.57b0
 
 bleach==6.2.0
 docx2pdf==0.1.8
+Markdown2==2.5.4
 python-docx
