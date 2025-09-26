@@ -843,7 +843,7 @@
 					<Personalization
 						{saveSettings}
 						on:save={() => {
-							toast.success($i1e.t('Settings saved successfully!'));
+							toast.success($i18n.t('Settings saved successfully!'));
 						}}
 					/>
 				{:else if selectedTab === 'audio'}
