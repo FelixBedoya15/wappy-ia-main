@@ -1,0 +1,49 @@
+
+.dark-colorful * {
+	stroke: #e0def4 !important;
+}
+
+.dark-colorful .app > * {
+	background-color: #121212 !important;
+}
+
+.dark-colorful #nav {
+	background-color: #1E1E1E;
+}
+
+.dark-colorful .py-2\.5.my-auto.flex.flex-col.justify-between.h-screen {
+	background: #1E1E1E;
+}
+
+.dark-colorful .bg-white.dark\:bg-gray-800 {
+	background: #1E1E1E;
+}
+
+.dark-colorful #chat-input {
+	background: #2C2C2C;
+	margin: 0.3rem;
+	padding: 0.5rem;
+}
+
+.dark-colorful .bg-gradient-to-t.from-white.dark\:from-gray-800.from-40\%.pb-2 {
+	background: #1E1E1E !important;
+	padding-top: 0.6rem;
+}
+
+/* Icon Colors */
+.dark-colorful .text-white.bg-gray-100.dark\:text-gray-800.dark\:bg-gray-600.disabled.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: #4F4F4F;
+}
+
+.dark-colorful .bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: #33A5FF;
+}
+
+.dark-colorful .bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center > * {
+	fill: #FFFFFF !important;
+}
+
+/* General Icon Colors */
+.dark-colorful svg {
+    color: #33A5FF; /* A vibrant blue */
+}
