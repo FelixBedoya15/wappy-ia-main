@@ -418,7 +418,6 @@
 				'webhookurl'
 			]
 		}
-		}
 	];
 
 	let availableSettings = [];
