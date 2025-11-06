@@ -2,13 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link
-			id="favicon-link"
-			rel="icon"
-			type="image/png"
-			href="/static/favicon.png"
-			crossorigin="use-credentials"
-		/>
+		<link rel="icon" type="image/png" href="/static/favicon.png" crossorigin="use-credentials" />
 		<link
 			rel="icon"
 			type="image/png"
@@ -29,12 +23,7 @@
 			href="/static/apple-touch-icon.png"
 			crossorigin="use-credentials"
 		/>
-		<link
-			rel="manifest"
-			href="/manifest.json"
-			crossorigin="use-credentials"
-			crossorigin="use-credentials"
-		/>
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
@@ -97,38 +86,11 @@
 				});
 				const isDarkMode = document.documentElement.classList.contains('dark');
 
-				const faviconLink = document.getElementById('favicon-link');
-
-				if (isDarkMode) {
-					faviconLink.href = '/static/favicon-dark.png';
-
-					const darkImage = new Image();
-					darkImage.src = '/static/favicon-dark.png';
-
-					darkImage.onerror = () => {
-						faviconLink.href = '/static/favicon.png';
-						faviconLink.style.filter = 'invert(1)';
-					};
-				}
-
 				const logo = document.createElement('img');
 				logo.id = 'logo';
 				logo.style =
 					'position: absolute; width: auto; height: 6rem; top: 44%; left: 50%; transform: translateX(-50%); display:block;';
-				if (isDarkMode) {
-					const darkSplashImage = new Image();
-					darkSplashImage.src = '/static/splash-dark.png';
-					darkSplashImage.onload = () => {
-						logo.src = '/static/splash-dark.png';
-						logo.style.filter = ''; // Ensure no inversion is applied if splash-dark.png exists
-					};
-					darkSplashImage.onerror = () => {
-						logo.src = '/static/splash.png';
-						logo.style.filter = 'invert(1)'; // Invert image if splash-dark.png is missing
-					};
-				} else {
-					logo.src = '/static/splash.png';
-				}
+				logo.src = isDarkMode ? '/static/splash-dark.png' : '/static/splash.png';
 
 				document.addEventListener('DOMContentLoaded', function () {
 					const splash = document.getElementById('splash-screen');

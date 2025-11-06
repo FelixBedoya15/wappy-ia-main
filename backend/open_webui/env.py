@@ -110,7 +110,7 @@ for source in log_sources:
 
 log.setLevel(SRC_LOG_LEVELS["CONFIG"])
 
-WEBUI_NAME = os.environ.get("WEBUI_NAME", "WAPPY IA")
+WEBUI_NAME = os.environ.get("WAPPY IA", "WAPPY IA")
 if WEBUI_NAME != "WAPPY IA":
     WEBUI_NAME += " (WAPPY IA)"
 
