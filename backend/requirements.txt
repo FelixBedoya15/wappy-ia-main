@@ -152,3 +152,4 @@ bleach==6.2.0
 docx2pdf==0.1.8
 python-docx
 colorlog==6.9.0
+markdown2==2.5.4
